@@ -2,20 +2,20 @@ import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 
-# 1. Your 12-molecule dataset
+# 1. Your 12-molecule dataset, NOW WITH TARGET BDEs ADDED!
 data = [
-    {"name": "Formaldehyde", "smiles": "C=O", "class": "Aldehyde / Precursor"},
-    {"name": "Hydrogen Cyanide", "smiles": "C#N", "class": "Nitrile / Key Precursor"},
-    {"name": "Formamide", "smiles": "NC=O", "class": "Amide / Amino Acid Precursor"},
-    {"name": "Acetaldehyde", "smiles": "CC=O", "class": "Aldehyde / Precursor"},
-    {"name": "Methylamine", "smiles": "CN", "class": "Amine / Precursor"},
-    {"name": "Cyanoacetylene", "smiles": "C#CC#N", "class": "Nitrile / Precursor"},
-    {"name": "Glycolaldehyde", "smiles": "OCC=O", "class": "Sugar Precursor"},
-    {"name": "Glycine", "smiles": "NCC(=O)O", "class": "Simplest Amino Acid"},
-    {"name": "Benzene", "smiles": "c1ccccc1", "class": "Monocyclic Aromatic Precursor"},
-    {"name": "Naphthalene", "smiles": "c1ccc2ccccc2c1", "class": "2-Ring Simple PAH"},
-    {"name": "Anthracene", "smiles": "c1ccc2cc3ccccc3cc2c1", "class": "3-Ring Simple PAH"},
-    {"name": "Pyrene", "smiles": "c1cc2ccc3ccc4ccc1c5c2c3c45", "class": "4-Ring Simple PAH"}
+    {"name": "Formaldehyde", "smiles": "C=O", "class": "Aldehyde / Precursor", "target_bde_kjmol": 364},
+    {"name": "Hydrogen Cyanide", "smiles": "C#N", "class": "Nitrile / Key Precursor", "target_bde_kjmol": 537},
+    {"name": "Formamide", "smiles": "NC=O", "class": "Amide / Amino Acid Precursor", "target_bde_kjmol": 399},
+    {"name": "Acetaldehyde", "smiles": "CC=O", "class": "Aldehyde / Precursor", "target_bde_kjmol": 374},
+    {"name": "Methylamine", "smiles": "CN", "class": "Amine / Precursor", "target_bde_kjmol": 389},
+    {"name": "Cyanoacetylene", "smiles": "C#CC#N", "class": "Nitrile / Precursor", "target_bde_kjmol": 556},
+    {"name": "Glycolaldehyde", "smiles": "OCC=O", "class": "Sugar Precursor", "target_bde_kjmol": 365},
+    {"name": "Glycine", "smiles": "NCC(=O)O", "class": "Simplest Amino Acid", "target_bde_kjmol": 350},
+    {"name": "Benzene", "smiles": "c1ccccc1", "class": "Monocyclic Aromatic Precursor", "target_bde_kjmol": 473},
+    {"name": "Naphthalene", "smiles": "c1ccc2ccccc2c1", "class": "2-Ring Simple PAH", "target_bde_kjmol": 470},
+    {"name": "Anthracene", "smiles": "c1ccc2cc3ccccc3cc2c1", "class": "3-Ring Simple PAH", "target_bde_kjmol": 464},
+    {"name": "Pyrene", "smiles": "c1cc2ccc3ccc4ccc1c5c2c3c45", "class": "4-Ring Simple PAH", "target_bde_kjmol": 465}
 ]
 
 df = pd.DataFrame(data)
@@ -40,7 +40,7 @@ print("⚡ Running RDKit feature extraction...")
 feature_df = df['smiles'].apply(extract_group_a_features)
 final_df = pd.concat([df, feature_df], axis=1)
 
-# 3. Export to a CSV file so you can open it in Excel, Google Sheets, or Notion!
+# 3. Export to a CSV file (this will overwrite the old one with the new updated version)
 output_filename = "astrochem_features_baseline.csv"
 final_df.to_csv(output_filename, index=False)
-print(f"✅ Success! Data saved to {output_filename}")
+print(f"Success! Updated dataset with BDE targets saved to {output_filename}")
