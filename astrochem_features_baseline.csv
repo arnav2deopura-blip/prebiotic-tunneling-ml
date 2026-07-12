@@ -1,0 +1,13 @@
+name,smiles,class,Exact_MW,Heavy_Atom_Count,Num_H_Donors,Num_H_Acceptors,Num_Rotatable_Bonds,Num_Aromatic_Rings
+Formaldehyde,C=O,Aldehyde / Precursor,30.010564684,2.0,0.0,1.0,0.0,0.0
+Hydrogen Cyanide,C#N,Nitrile / Key Precursor,27.010899031999998,2.0,0.0,1.0,0.0,0.0
+Formamide,NC=O,Amide / Amino Acid Precursor,45.021463716,3.0,1.0,1.0,0.0,0.0
+Acetaldehyde,CC=O,Aldehyde / Precursor,44.026214748,3.0,0.0,1.0,0.0,0.0
+Methylamine,CN,Amine / Precursor,31.04219916,2.0,1.0,1.0,0.0,0.0
+Cyanoacetylene,C#CC#N,Nitrile / Precursor,51.010899032,4.0,0.0,1.0,0.0,0.0
+Glycolaldehyde,OCC=O,Sugar Precursor,60.021129368000004,4.0,1.0,2.0,1.0,0.0
+Glycine,NCC(=O)O,Simplest Amino Acid,75.0320284,5.0,2.0,2.0,1.0,0.0
+Benzene,c1ccccc1,Monocyclic Aromatic Precursor,78.046950192,6.0,0.0,0.0,0.0,1.0
+Naphthalene,c1ccc2ccccc2c1,2-Ring Simple PAH,128.062600256,10.0,0.0,0.0,0.0,2.0
+Anthracene,c1ccc2cc3ccccc3cc2c1,3-Ring Simple PAH,178.07825032,14.0,0.0,0.0,0.0,3.0
+Pyrene,c1cc2ccc3ccc4ccc1c5c2c3c45,4-Ring Simple PAH,200.062600256,16.0,0.0,0.0,0.0,5.0
