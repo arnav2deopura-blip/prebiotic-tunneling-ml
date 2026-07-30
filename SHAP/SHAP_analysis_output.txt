@@ -1,0 +1,48 @@
+Using 146 molecules for SHAP analysis
+XGBoost R² on full data: 0.985560
+Out-of-fold MAE: 0.0176
+Saved shap_summary_plot.png
+Saved shap_bar_plot.png
+
+Top features by mean |SHAP| (log10 BDE units):
+NOTE: A SHAP value of 0.1 means the feature changes log10(BDE) by 0.1,
+      which corresponds to multiplying the raw BDE by 10^0.1 ≈ 1.26 (i.e., +26%).
+
+  BDE_min_kJmol: 0.0484
+  BDE_weak_bond_count: 0.0125
+  radical_stability_score: 0.0062
+  spin_tax_correction_kJmol: 0.0054
+  Exact_MW: 0.0031
+  log_gamow_factor_independent: 0.0020
+  Num_H_Donors: 0.0015
+  BDE_min_bond_length_A: 0.0008
+  Heavy_Atom_Count: 0.0006
+  log_tunneling_10K_independent: 0.0002
+  molecular_charge: 0.0002
+  crossover_T_independent: 0.0002
+Saved shap_dependence_BDE_min.png
+Saved shap_dependence_tunneling.png
+
+Advanced: Computing SHAP values from cross-validated models...
+(This may take a few minutes)
+
+Top features by mean |SHAP| (Out-of-Fold, regularised model):
+  BDE_min_kJmol: 0.0495
+  BDE_weak_bond_count: 0.0124
+  spin_tax_correction_kJmol: 0.0036
+  Exact_MW: 0.0032
+  radical_stability_score: 0.0031
+  log_gamow_factor_independent: 0.0018
+  BDE_min_bond_length_A: 0.0010
+  Heavy_Atom_Count: 0.0008
+  molecular_charge: 0.0007
+  Num_H_Donors: 0.0006
+  has_oxygen: 0.0005
+  net_formal_charge: 0.0005
+
+VERIFICATION: BDE_min remains dominant in OOF evaluation.
+  In-fold BDE_min SHAP: 0.0484
+  OOF BDE_min SHAP:     0.0495
+Saved shap_values_oof.npy
+
+SHAP analysis complete.

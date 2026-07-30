@@ -1,0 +1,42 @@
+Using 146 molecules for analysis
+
+Correlation of features with BDE_min_kJmol:
+BDE_min_kJmol                    1.000000
+spin_tax_correction_kJmol        0.235709
+net_formal_charge                0.167520
+molecular_charge                 0.167520
+Heavy_Atom_Count                 0.138300
+Exact_MW                         0.076915
+crossover_T_independent          0.064028
+radical_stability_score          0.051782
+log_gamow_factor_independent     0.034314
+Num_Aromatic_Rings               0.019963
+Num_H_Donors                     0.015824
+Num_H_Acceptors                 -0.048006
+Num_Rotatable_Bonds             -0.057577
+BDE_min_bond_length_A           -0.067623
+log_tunneling_50K_independent   -0.070671
+log_tunneling_20K_independent   -0.071566
+log_tunneling_10K_independent   -0.073180
+oxygen_radical_flag             -0.099317
+has_oxygen                      -0.172137
+BDE_weak_bond_count             -0.391299
+Name: BDE_min_kJmol, dtype: float64
+Saved feature_correlation_matrix.png
+Saved model_errors.csv
+Saved error_boxplots_by_model.png
+Saved error_vs_BDEmin.png
+Saved error_by_bondtype.png
+Saved error_by_oxygenflag.png
+Saved error_comparison_plots.png
+
+Number of molecules improved by physics features (>0.01 log10): 0
+Number of molecules worsened by physics features (>0.01 log10): 0
+
+Error statistics (absolute error, log10):
+  Classical-Only (A): mean=0.0596, std=0.0742, median=0.0381
+  Classical + BDE (A+B): mean=0.0304, std=0.0552, median=0.0160
+  Classical + Independent Physics (A+C): mean=0.0603, std=0.0748, median=0.0372
+  Full (A+B+C): mean=0.0303, std=0.0553, median=0.0161
+
+Analysis complete. All figures saved.
